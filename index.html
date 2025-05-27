@@ -30,7 +30,10 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="loginBtn">ĐĂNG NHẬP</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
@@ -42,8 +45,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">HỖ TRỢ</a>
                     </li>
-
                 </ul>
+
 
             </div>
         </nav>
@@ -255,6 +258,12 @@
     <script src="assets/jquery.min.js"></script>
     <script src="assets/popper.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định
+            window.location.href = "login.html"; // Chuyển trang
+        });
+    </script>
 </body>
 
 </html>

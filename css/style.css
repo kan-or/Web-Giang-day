@@ -56,25 +56,37 @@ button {
 }
 
 /* header */
-.navbar-light .navbar-nav .nav-link {
-    /* #4499AA => #49A */
-    /* #55ccee => #5ce */
-    color: var(--primary-color);
-    padding-left: 12px;
-    padding-right: 12px;
-    font-size: 14px;
-    margin-right: 7px;
-}
 
-.navbar-light .navbar-nav li:last-child .nav-link {
-    margin-right: 0;
-}
+  .navbar-light .navbar-nav .nav-link {
+    font-family: Cambria, Cochin, Georgia, serif;  /* giống với TRANG CHỦ */
+    font-size: 16px;
+    color: #333;
+    padding: 8px 14px;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+  }
 
-.navbar-light .navbar-nav .active .nav-link,
+/* Hover: thêm nền xanh + chữ trắng */
 .navbar-light .navbar-nav .nav-link:hover {
-    color: var(--secondary-color);
+    color: #fff;
     background-color: #1bbc9b;
-}
+    transition: all 0.3s ease;
+    border-radius: 4px; /* tùy chọn bo góc mềm mại */
+  }
+  
+  /* Active giữ màu giống hover */
+  .navbar-light .navbar-nav .active .nav-link {
+    color: #fff;
+    background-color: #1bbc9b;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
 
 .navbar {
     padding-top: 19px;

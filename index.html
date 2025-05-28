@@ -31,9 +31,6 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="loginBtn">ĐĂNG NHẬP</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
@@ -45,10 +42,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">HỖ TRỢ</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="registerBtn">ĐĂNG KÝ</a>
+                    </li>
+                    <li class="nav-item nav-divider">
+                        <span class="nav-link divider">|</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="loginBtn">ĐĂNG NHẬP</a>
+                    </li>
                 </ul>
 
 
+
+
             </div>
+
+
         </nav>
     </header>
     <main>
@@ -260,10 +270,51 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
         document.getElementById("loginBtn").addEventListener("click", function (event) {
-            event.preventDefault(); // Ngăn chặn hành vi mặc định
-            window.location.href = "login.html"; // Chuyển trang
+            event.preventDefault();
+            window.location.href = "login.html";
+        });
+
+        document.getElementById("registerBtn").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "register.html";
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            const loginBtn = document.getElementById("loginBtn");
+            const registerBtn = document.getElementById("registerBtn");
+
+            if (currentUser) {
+                // Tạo dropdown menu cho người dùng
+                const userItem = document.createElement("li");
+                userItem.classList.add("nav-item", "dropdown");
+
+                userItem.innerHTML = `
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    👤 ${currentUser.fullname}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#" id="logoutBtn">Đăng xuất</a>
+                </div>
+            `;
+
+                // Xóa nút đăng nhập / đăng ký
+                loginBtn.parentElement.remove();
+                registerBtn.parentElement.remove();
+
+                // Thêm menu người dùng
+                document.querySelector(".navbar-nav").appendChild(userItem);
+
+                // Xử lý đăng xuất
+                document.getElementById("logoutBtn").addEventListener("click", function () {
+                    localStorage.removeItem("currentUser");
+                    location.reload();
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

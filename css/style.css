@@ -310,3 +310,15 @@ footer .back-to-top {
         padding-bottom: 0;
     }
 }
+
+/* Divider giữa ĐĂNG KÝ và ĐĂNG NHẬP */
+.nav-divider .divider {
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 8px 6px;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.7;
+    font-family: Cambria, Cochin, Georgia, serif;
+}

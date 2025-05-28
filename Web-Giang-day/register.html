@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký tài khoản</title>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" width="200px" height="40px" alt="Logo">
+            </a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+            <input type="text" name="fullname" placeholder="Họ và tên (2 từ trở lên)" required pattern="(\w+\s+\w+)+">
+            <input type="text" name="username" placeholder="Tên đăng nhập (chỉ chữ và số, 4–16 ký tự)" required
+                pattern="[A-Za-z0-9]{4,16}">
+            <input type="password" name="password" placeholder="Mật khẩu (tối thiểu 6 ký tự, có chữ và số)" required
+                pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}">
+            <button type="submit">Đăng ký</button>
+        </form>
+        <p>Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const fullname = this.fullname.value.trim();
+            const username = this.username.value.trim();
+            const password = this.password.value.trim();
+            registerUser(fullname, username, password);
+        });
+    </script>
+
+</body>
+
+</html>

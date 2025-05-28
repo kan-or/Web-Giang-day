@@ -1,0 +1,376 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define font (khai báo font) */
+@font-face {
+    font-family: Lato-Regular;
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url('../fonts/Lato/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: Lato-Italic;
+    src: url('../fonts/Lato/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url('../fonts/Lato/Lato-Light.ttf');
+}
+
+/* Define variable (khai báo biến) */
+:root {
+    --primary-color: #444;
+    --secondary-color: #fff;
+    /* --conga: 2; */
+    /* khi trang cuộn, nó mượt */
+    scroll-behavior: smooth;
+}
+
+/* Define inherit (Khai báo phần kế thừa) */
+body {
+    font-family: Cambria, Cochin;
+    color: var(--primary-color);
+}
+
+/* Define common (khai báo phần dùng chung) */
+
+button {
+    font-family: Lato-Bold;
+    font-size: 13px;
+    color: var(--secondary-color);
+    background-color: #1bbc9b;
+    height: 37px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: none;
+    letter-spacing: 3px;
+}
+
+/* header */
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: Cambria, Cochin, Georgia, serif;
+    /* giống với TRANG CHỦ */
+    font-size: 16px;
+    color: #333;
+    padding: 8px 14px;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover: thêm nền xanh + chữ trắng */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #1bbc9b;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    /* tùy chọn bo góc mềm mại */
+}
+
+/* Active giữ màu giống hover */
+.navbar-light .navbar-nav .active .nav-link {
+    color: #fff;
+    background-color: #1bbc9b;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+.navbar {
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+/* main */
+/* home */
+.home {
+    /* bộ 3 để làm hình nền tối ưu nhất */
+    background-image: url('../images/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    padding-top: 71px;
+    padding-bottom: 82px;
+}
+
+.home h1 {
+    font-size: 55px;
+    font-family: Lato-Light;
+    margin-bottom: 30px;
+}
+
+.home h1 span {
+    font-family: Lato-Bold;
+}
+
+.home p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 576px;
+    margin: auto;
+    margin-bottom: 47px;
+}
+
+.home button {
+
+    margin-bottom: 42px;
+}
+
+/* portfolio */
+
+
+/* button.active: chọn thẻ button có class active để định dạng */
+.filter-buttons {
+    margin: 20px 0;
+}
+
+.filter-buttons button {
+    background-color: #16a086;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 8px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: rgb(89, 228, 89);
+}
+
+.course-card {
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.course-card img {
+    width: 100%;
+    border: 5px solid rgb(81, 224, 81);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.course-card img:hover {
+    transform: scale(1.05);
+}
+
+.course-card.hide {
+    display: none !important;
+}
+
+.scroll-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-row::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-row::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.course-card {
+    flex: 0 0 auto;
+    width: 250px;
+    /* Hoặc tùy kích thước mong muốn */
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.course-card img {
+    width: 100%;
+    border: 5px solid rgb(78, 209, 78);
+    border-radius: 20px;
+}
+
+.course-card.hide {
+    display: none !important;
+}
+
+/* about */
+.about {
+    padding-top: 54px;
+    /* 74px - 20px = 54px */
+    padding-bottom: 54px;
+    background-color: #16a086;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 11px;
+    color: var(--secondary-color);
+}
+
+.about>p {
+    font-size: 14px;
+    margin-bottom: 41px;
+    color: var(--secondary-color);
+}
+
+.about .box-info {
+    background-color: var(--secondary-color);
+    width: 220px;
+    /* box-info nằm giữa so với col */
+    margin: auto;
+    padding: 18px 10px;
+    margin-bottom: 20px;
+}
+
+.about .box-info h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.about .box-info span {
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 18px;
+    font-family: Lato-Italic;
+}
+
+.about .box-info p {
+    font-size: 14px;
+    text-align: left;
+}
+
+/* contact */
+.contact {
+    padding-top: 49px;
+    padding-bottom: 60px;
+    background-color: #ecf0f1;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 11px;
+}
+
+.contact>p {
+    font-size: 14px;
+    margin-bottom: 51px;
+}
+
+.contact1 a {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
+
+.contact1 a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.contact1 .hotline {
+    bottom: 80px;
+}
+
+.contact input,
+.contact textarea {
+    border: 2px solid #bec3c7;
+    margin-bottom: 22px;
+    border-radius: 0;
+}
+
+.contact input {
+    height: 47px;
+}
+
+.contact textarea {
+    height: 153px;
+}
+
+.contact ::placeholder {
+    font-size: 14px;
+    font-family: Lato-Italic;
+    color: #999;
+}
+
+.contact button {
+    padding-left: 29px;
+    padding-right: 29px;
+}
+
+.contact .right-col>* {
+    font-size: 14px;
+}
+
+.contact .right-col h3 {
+    margin-bottom: 21px;
+}
+
+.contact .right-col address {
+    margin-bottom: 24px;
+}
+
+.contact .right-col p {
+    margin-bottom: 18px;
+}
+
+/* footer */
+footer {
+    color: var(--secondary-color);
+    font-size: 14px;
+    background-color: #2d3e50;
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+
+footer .back-to-top {
+    position: fixed;
+    right: 42px;
+    bottom: 20px;
+    color: var(--secondary-color);
+    width: 44px;
+    line-height: 44px;
+    background-color: #1bbc9b;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* màn hình <= 768px (mobile) */
+@media(max-width: 768px) {
+    .navbar-collapse {
+        background-color: rgba(208, 208, 208, 0.8);
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .navbar-light .navbar-nav li:last-child .nav-link {
+        margin-bottom: 0;
+    }
+
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

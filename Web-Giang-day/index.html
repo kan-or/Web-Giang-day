@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learns.O</title>
+    <!-- link:favicon -->
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- layout (bố cục) -->
+    <!-- header+main+footer -->
+    <header>
+        <!-- menu -->
+        <!-- b4-navbar-default -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" width="200px" height="40px" alt="Logo">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-lg-0">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gioithieu">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#khoahoc">KHÓA HỌC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hotro">HỖ TRỢ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="registerBtn">ĐĂNG KÝ</a>
+                    </li>
+                    <li class="nav-item nav-divider">
+                        <span class="nav-link divider">|</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="loginBtn">ĐĂNG NHẬP</a>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+
+
+        </nav>
+    </header>
+    <main>
+        <!-- section*4 -->
+        <!-- HOME -->
+        <section>
+            <!-- .home.container-fluid.text-center -->
+            <div class="home container-fluid text-center">
+                <!-- h1+p+button+a>img -->
+                <h1>Học cùng <span>Learns.O</span></h1>
+                <p>
+                    HIỆN ĐẠI, TIỆN LỢI, TƯ DUY SÁNG TẠO, HỌC VUI, HỌC NHANH <b>!</b>
+
+                </p>
+                <button>LEARN MORE</button>
+                <br>
+                <a href="#">
+                    <img src="images/arrow_bottom.png" alt="Go to portfolio">
+                </a>
+            </div>
+        </section>
+        <!-- PORTFOLIO -->
+        <section>
+            <!-- .portfolio.container-fluid.text-center -->
+            <div class="portfolio container-fluid text-center">
+                <!-- h2+p+button*4 -->
+                <h2 id="khoahoc">Khóa học</h2>
+                <p>
+                    Gồm các khóa học từ nâng cơ bản đến nâng cao.
+                <div class="filter-buttons">
+                    <button onclick="filterCourses('all')">All</button>
+                    <button onclick="filterCourses('5-7')">5-7</button>
+                    <button onclick="filterCourses('7-8')">7-8</button>
+                    <button onclick="filterCourses('8-10')">8-10</button>
+                </div>
+                <!-- .row*2>.col-lg-3*4>img -->
+                <div class="scroll-row">
+                    <div class="course-card 5-7">
+                        <img src="images/portfolio1.jpg" alt="Portfolio 1">
+                    </div>
+                    <div class="course-card 5-7">
+                        <img src="images/portfolio2.jpg" alt="Portfolio 2">
+                    </div>
+                    <div class="course-card 7-8">
+                        <img src="images/portfolio3.jpg" alt="Portfolio 3">
+                    </div>
+                    <div class="course-card 7-8">
+                        <img src="images/portfolio4.jpg" alt="Portfolio 4">
+                    </div>
+                    <div class="course-card 8-10">
+                        <img src="images/portfolio5.jpg" alt="Portfolio 5">
+                    </div>
+                    <div class="course-card 8-10">
+                        <img src="images/portfolio6.jpg" alt="Portfolio 6">
+                    </div>
+                    <div class="course-card 5-7">
+                        <img src="images/portfolio7.jpg" alt="Portfolio 7">
+                    </div>
+                    <div class="course-card 7-8">
+                        <img src="images/portfolio8.jpg" alt="Portfolio 8">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section>
+            <!-- .about.container-fluid.text-center -->
+            <div class="about container-fluid text-center">
+                <!-- h2+p -->
+                <h2 id="gioithieu">About Us</h2>
+                <p>
+                    Những giới thiệu ngắn về bản thân !
+                </p>
+                <!-- .row>.col-lg-4 -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="images/Nguyễn Thị Yến Nhi.jpg" width="220px" height="228px" alt="Person 1">
+                        <!-- .box-info -->
+                        <div class="box-info">
+                            <!-- h3+span+p -->
+                            <h3>Nguyễn Thị Yến Nhi </h3>
+                            <span>Giáo viên dạy toán </span>
+                            <p>
+                                Cô Nhi là giáo viên dạy Toán tận tâm và nhiệt huyết.
+                                Cô có phương pháp giảng dạy dễ hiểu, phù hợp với học sinh.
+                                Học với cô, nhiều em thêm yêu thích và tiến bộ trong môn Toán.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="images/Trần Xuân Lương.jpg" width="220px" height="228px" alt="Person 1">
+                        <!-- .box-info -->
+                        <div class="box-info">
+                            <!-- h3+span+p -->
+                            <h3>Trần Xuân Lương</h3>
+                            <span>Giáo viên dạy hóa </span>
+                            <p>
+                                Thầy Lương là giáo viên dạy Hóa học tâm huyết và giàu kinh nghiệm.
+                                Thầy luôn tạo hứng thú học tập qua các bài giảng sinh động, dễ hiểu.
+                                Nhờ thầy, nhiều học sinh đã nắm vững kiến thức và yêu thích môn Hóa.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="images/Rô-Y-Khang.jpg" width="220px" height="228px" alt="Person 1">
+                        <!-- .box-info -->
+                        <div class="box-info">
+                            <!-- h3+span+p -->
+                            <h3>Rô Y Khang </h3>
+                            <span>Giáo viên dạy lý </span>
+                            <p>
+                                Thầy Khang là giáo viên dạy Vật lý nhiệt tình và sáng tạo.
+                                Thầy luôn kết hợp lý thuyết với thực tiễn để giúp học sinh dễ hiểu bài.
+                                Nhiều học sinh yêu thích và học tốt môn Lý nhờ cách dạy của thầy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section>
+            <!-- .contact.container-fluid -->
+            <div class="contact container-fluid">
+                <!-- h2.text-center+p.text-center -->
+                <h2 class="text-center">
+                    Contact Us
+                </h2>
+                <p class="text-center" id="hotro">
+                    Thắc mắc cần hỗ trợ !!!
+                </p>
+                <!-- .row>.col-lg-6*2 -->
+                <div class="row">
+                    <!-- left col -->
+                    <div class="col-lg-6">
+                        <!-- form:post -->
+                        <form action="#" method="post">
+                            <!-- .row>.col-lg-6*2 -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!-- input:text -->
+                                    <input type="text" class="form-control" name="username" placeholder="Your name"
+                                        required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <!-- input:email -->
+                                    <input type="email" class="form-control" name="email" placeholder="Your email"
+                                        required>
+                                </div>
+
+                                <!-- .col-lg-12 -->
+                                <div class="col-lg-12">
+                                    <textarea class="form-control" name="message" placeholder="Your message"
+                                        required></textarea>
+                                </div>
+                                <!-- .col-lg-12.text-right -->
+                                <div class="col-lg-12 text-right">
+                                    <!-- button:submit{SUBMIT} -->
+                                    <button type="submit">SUBMIT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- right col -->
+                    <div class="col-lg-6 right-col">
+                        <!-- h3+address+p*3 -->
+                        <h3>INFORMATION</h3>
+                        <address>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Leaen.O <br>
+                            Đường Lê Duẩn <br>
+                            Thành Phố Buôn Ma Thuột, Đăk Lăk
+                        </address>
+                        <p>
+                            <i class="fa-solid fa-square-phone"></i>
+                            +444 (Phone) 123456
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-print"></i>
+                            +123 (FAX) 0011223
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            info@learn.O.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- .container-fluid -->
+        <div class="container-fluid">
+            © Copyright 2013 Bak-One | One Page Flat Template
+        </div>
+        <!-- a.back-to-top -->
+        <a href="#" class="back-to-top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+        </section>
+        <section class="contact1">
+            <!-- a.zalo>img -->
+            <a href="https://zalo.me/0932538468" class="zalo">
+                <img src="images/zalo.png" alt="zalo">
+            </a>
+
+            <!-- a.hotline>img -->
+            <a href="tel:0932538468" class="hotline">
+                <img src="images/mobile.jpg" alt="Hotline">
+            </a>
+        </section>
+    </footer>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "login.html";
+        });
+
+        document.getElementById("registerBtn").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "register.html";
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            const loginBtn = document.getElementById("loginBtn");
+            const registerBtn = document.getElementById("registerBtn");
+
+            if (currentUser) {
+                // Tạo dropdown menu cho người dùng
+                const userItem = document.createElement("li");
+                userItem.classList.add("nav-item", "dropdown");
+
+                userItem.innerHTML = `
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    👤 ${currentUser.fullname}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#" id="logoutBtn">Đăng xuất</a>
+                </div>
+            `;
+
+                // Xóa nút đăng nhập / đăng ký
+                loginBtn.parentElement.remove();
+                registerBtn.parentElement.remove();
+
+                // Thêm menu người dùng
+                document.querySelector(".navbar-nav").appendChild(userItem);
+
+                // Xử lý đăng xuất
+                document.getElementById("logoutBtn").addEventListener("click", function () {
+                    localStorage.removeItem("currentUser");
+                    location.reload();
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

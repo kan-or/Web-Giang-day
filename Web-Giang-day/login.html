@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" width="200px" height="40px" alt="Logo">
+            </a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+            <input type="text" name="username" placeholder="Tên đăng nhập" required>
+            <input type="password" name="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+        <p>Bạn chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const username = this.username.value.trim();
+            const password = this.password.value.trim();
+            loginUser(username, password);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            const loginBtn = document.getElementById("loginBtn");
+            const registerBtn = document.getElementById("registerBtn");
+
+            if (currentUser) {
+                // Tạo dropdown menu cho người dùng
+                const userItem = document.createElement("li");
+                userItem.classList.add("nav-item", "dropdown");
+
+                userItem.innerHTML = `
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    👤 ${currentUser.fullname}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#" id="logoutBtn">Đăng xuất</a>
+                </div>
+            `;
+
+                // Xóa nút đăng nhập / đăng ký
+                loginBtn.parentElement.remove();
+                registerBtn.parentElement.remove();
+
+                // Thêm menu người dùng
+                document.querySelector(".navbar-nav").appendChild(userItem);
+
+                // Xử lý đăng xuất
+                document.getElementById("logoutBtn").addEventListener("click", function () {
+                    localStorage.removeItem("currentUser");
+                    location.reload();
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

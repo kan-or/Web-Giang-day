@@ -34,13 +34,13 @@
                         <a class="nav-link" href="#">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GIỚI THIỆU</a>
+                        <a class="nav-link" href="#gioithieu">GIỚI THIỆU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">KHÓA HỌC</a>
+                        <a class="nav-link" href="#khoahoc">KHÓA HỌC</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HỖ TRỢ</a>
+                        <a class="nav-link" href="#hotro">HỖ TRỢ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="registerBtn">ĐĂNG KÝ</a>
@@ -82,44 +82,44 @@
         </section>
         <!-- PORTFOLIO -->
         <section>
-            <!-- .portfolio.container-fluid.text-center -->
             <div class="portfolio container-fluid text-center">
-                <!-- h2+p+button*4 -->
-                <h2>Khóa học</h2>
-                <p>
-                    Gồm các khóa học từ nâng cơ bản đến nâng cao.
-                </p>
-                <button class="active">All</button>
-                <button>5-7</button>
-                <button>7-8</button>
-                <button>8-10</button>
-                <!-- .row*2>.col-lg-3*4>img -->
-                <div class="row">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                <h2 id="khoahoc">Khóa học</h2>
+                <p>Gồm các khóa học từ năng cơ bản đến nâng cao.</p>
+
+                <div class="filter-buttons">
+                    <button onclick="filterCourses('all')">All</button>
+                    <button onclick="filterCourses('5-7')">5-7</button>
+                    <button onclick="filterCourses('7-8')">7-8</button>
+                    <button onclick="filterCourses('8-10')">8-10</button>
+                </div>
+
+                <div class="scroll-row">
+                    <div class="course-card 5-7">
                         <img src="images/portfolio1.jpg" alt="Portfolio 1">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <img src="images/portfolio2.jpg" alt="Portfolio 3">
+                    <div class="course-card 5-7">
+                        <img src="images/portfolio2.jpg" alt="Portfolio 2">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="course-card 7-8">
                         <img src="images/portfolio3.jpg" alt="Portfolio 3">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="course-card 7-8">
                         <img src="images/portfolio4.jpg" alt="Portfolio 4">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="course-card 8-10">
                         <img src="images/portfolio5.jpg" alt="Portfolio 5">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="course-card 8-10">
                         <img src="images/portfolio6.jpg" alt="Portfolio 6">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="course-card 5-7">
                         <img src="images/portfolio7.jpg" alt="Portfolio 7">
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="course-card 7-8">
                         <img src="images/portfolio8.jpg" alt="Portfolio 8">
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- ABOUT -->
@@ -127,57 +127,51 @@
             <!-- .about.container-fluid.text-center -->
             <div class="about container-fluid text-center">
                 <!-- h2+p -->
-                <h2>About Us</h2>
+                <h2 id="gioithieu">About Us</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Những giới thiệu ngắn về bản thân !
                 </p>
                 <!-- .row>.col-lg-4 -->
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="images/person1.jpg" alt="Person 1">
+                        <img src="images/Nguyễn Thị Yến Nhi.jpg" width="220px" height="228px" alt="Person 1">
                         <!-- .box-info -->
                         <div class="box-info">
                             <!-- h3+span+p -->
-                            <h3>Melannie Doe</h3>
-                            <span>Project Manager</span>
+                            <h3>Nguyễn Thị Yến Nhi </h3>
+                            <span>Giáo viên dạy toán </span>
                             <p>
-                                Ut wisi enim ad minim veniam,
-                                quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl
-                                ut aliquip ex ea commodo
-                                consequat.
+                                Cô Nhi là giáo viên dạy Toán tận tâm và nhiệt huyết.
+                                Cô có phương pháp giảng dạy dễ hiểu, phù hợp với học sinh.
+                                Học với cô, nhiều em thêm yêu thích và tiến bộ trong môn Toán.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <img src="images/person2.jpg" alt="Person 1">
+                        <img src="images/Trần Xuân Lương.jpg" width="220px" height="228px" alt="Person 1">
                         <!-- .box-info -->
                         <div class="box-info">
                             <!-- h3+span+p -->
-                            <h3>Jhonnie Doe</h3>
-                            <span>Graphic Designer</span>
+                            <h3>Trần Xuân Lương</h3>
+                            <span>Giáo viên dạy hóa </span>
                             <p>
-                                Ut wisi enim ad minim veniam,
-                                quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl
-                                ut aliquip ex ea commodo
-                                consequat.
+                                Thầy Lương là giáo viên dạy Hóa học tâm huyết và giàu kinh nghiệm.
+                                Thầy luôn tạo hứng thú học tập qua các bài giảng sinh động, dễ hiểu.
+                                Nhờ thầy, nhiều học sinh đã nắm vững kiến thức và yêu thích môn Hóa.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <img src="images/person3.jpg" alt="Person 1">
+                        <img src="images/Rô-Y-Khang.jpg" width="220px" height="228px" alt="Person 1">
                         <!-- .box-info -->
                         <div class="box-info">
                             <!-- h3+span+p -->
-                            <h3>Daniel Doe</h3>
-                            <span>Web Designer</span>
+                            <h3>Rô Y Khang </h3>
+                            <span>Giáo viên dạy lý </span>
                             <p>
-                                Ut wisi enim ad minim veniam,
-                                quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl
-                                ut aliquip ex ea commodo
-                                consequat.
+                                Thầy Khang là giáo viên dạy Vật lý nhiệt tình và sáng tạo.
+                                Thầy luôn kết hợp lý thuyết với thực tiễn để giúp học sinh dễ hiểu bài.
+                                Nhiều học sinh yêu thích và học tốt môn Lý nhờ cách dạy của thầy.
                             </p>
                         </div>
                     </div>
@@ -192,8 +186,8 @@
                 <h2 class="text-center">
                     Contact Us
                 </h2>
-                <p class="text-center">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                <p class="text-center" id="hotro">
+                    Thắc mắc cần hỗ trợ !!!
                 </p>
                 <!-- .row>.col-lg-6*2 -->
                 <div class="row">
@@ -234,9 +228,9 @@
                         <h3>INFORMATION</h3>
                         <address>
                             <i class="fa-solid fa-location-dot"></i>
-                            Bak-One Company <br>
-                            12345 Hollywood Bvld Street <br>
-                            Los Angeles, California
+                            Leaen.O <br>
+                            Đường Lê Duẩn <br>
+                            Thành Phố Buôn Ma Thuột, Đăk Lăk
                         </address>
                         <p>
                             <i class="fa-solid fa-square-phone"></i>
@@ -248,11 +242,22 @@
                         </p>
                         <p>
                             <i class="fa-solid fa-envelope"></i>
-                            info@bak-onecompany.com
+                            info@learn.O.com
                         </p>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="contact1">
+            <!-- a.zalo>img -->
+            <a href="https://zalo.me/0932538468" class="zalo">
+                <img src="images/zalo.png" alt="zalo">
+            </a>
+
+            <!-- a.hotline>img -->
+            <a href="tel:0932538468" class="hotline">
+                <img src="images/mobile.jpg" alt="Hotline">
+            </a>
         </section>
     </main>
     <footer>

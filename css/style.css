@@ -57,8 +57,9 @@ button {
 
 /* header */
 
-  .navbar-light .navbar-nav .nav-link {
-    font-family: Cambria, Cochin, Georgia, serif;  /* giống với TRANG CHỦ */
+.navbar-light .navbar-nav .nav-link {
+    font-family: Cambria, Cochin, Georgia, serif;
+    /* giống với TRANG CHỦ */
     font-size: 16px;
     color: #333;
     padding: 8px 14px;
@@ -69,24 +70,25 @@ button {
     transition: all 0.3s ease;
     display: inline-block;
     text-align: center;
-  }
+}
 
 /* Hover: thêm nền xanh + chữ trắng */
 .navbar-light .navbar-nav .nav-link:hover {
     color: #fff;
     background-color: #1bbc9b;
     transition: all 0.3s ease;
-    border-radius: 4px; /* tùy chọn bo góc mềm mại */
-  }
-  
-  /* Active giữ màu giống hover */
-  .navbar-light .navbar-nav .active .nav-link {
+    border-radius: 4px;
+    /* tùy chọn bo góc mềm mại */
+}
+
+/* Active giữ màu giống hover */
+.navbar-light .navbar-nav .active .nav-link {
     color: #fff;
     background-color: #1bbc9b;
     font-weight: bold;
     border-radius: 4px;
-  }
-  
+}
+
 
 .navbar {
     padding-top: 19px;
@@ -129,35 +131,81 @@ button {
 }
 
 /* portfolio */
-.portfolio {
-    padding-top: 51px;
-    /* 61px - 34px = 27px */
-    padding-bottom: 27px;
-}
 
-.portfolio h2 {
-    font-size: 28px;
-    margin-bottom: 11px;
-}
-
-.portfolio p {
-    font-size: 16px;
-    margin-bottom: 36px;
-}
-
-.portfolio button {
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 45px;
-}
 
 /* button.active: chọn thẻ button có class active để định dạng */
-.portfolio button.active {
-    background-color: #16a086;
+.filter-buttons {
+    margin: 20px 0;
 }
 
-.portfolio img {
-    margin-bottom: 34px;
+.filter-buttons button {
+    background-color: #16a086;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 8px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: rgb(89, 228, 89);
+}
+
+.course-card {
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.course-card img {
+    width: 100%;
+    border: 5px solid rgb(81, 224, 81);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.course-card img:hover {
+    transform: scale(1.05);
+}
+
+.course-card.hide {
+    display: none !important;
+}
+
+.scroll-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-row::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-row::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.course-card {
+    flex: 0 0 auto;
+    width: 250px;
+    /* Hoặc tùy kích thước mong muốn */
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.course-card img {
+    width: 100%;
+    border: 5px solid rgb(78, 209, 78);
+    border-radius: 20px;
+}
+
+.course-card.hide {
+    display: none !important;
 }
 
 /* about */
@@ -221,6 +269,22 @@ button {
 .contact>p {
     font-size: 14px;
     margin-bottom: 51px;
+}
+
+.contact1 a {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
+
+.contact1 a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.contact1 .hotline {
+    bottom: 80px;
 }
 
 .contact input,
@@ -309,16 +373,4 @@ footer .back-to-top {
         padding-top: 0;
         padding-bottom: 0;
     }
-}
-
-/* Divider giữa ĐĂNG KÝ và ĐĂNG NHẬP */
-.nav-divider .divider {
-    color: #333;
-    font-size: 16px;
-    font-weight: normal;
-    padding: 8px 6px;
-    pointer-events: none;
-    user-select: none;
-    opacity: 0.7;
-    font-family: Cambria, Cochin, Georgia, serif;
 }

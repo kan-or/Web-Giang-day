@@ -339,6 +339,7 @@ footer {
 }
 
 footer .back-to-top {
+    margin-right: 90px;
     position: fixed;
     right: 42px;
     bottom: 20px;
